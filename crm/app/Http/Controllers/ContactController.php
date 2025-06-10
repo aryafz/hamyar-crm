@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Http\Resources\ContactResource;
 
 class ContactController extends Controller
 {
@@ -12,7 +13,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return Contact::all();
+        return ContactResource::collection(Contact::all());
     }
 
     /**
@@ -37,7 +38,8 @@ class ContactController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        return Contact::create($data);
+        $contact = Contact::create($data);
+        return new ContactResource($contact);
     }
 
     /**
@@ -45,7 +47,7 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        return $contact;
+        return new ContactResource($contact);
     }
 
     /**
@@ -72,7 +74,7 @@ class ContactController extends Controller
 
         $contact->update($data);
 
-        return $contact;
+        return new ContactResource($contact);
     }
 
     /**

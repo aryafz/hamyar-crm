@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Http\Resources\OrderResource;
 
 class OrderController extends Controller
 {
@@ -12,7 +13,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return Order::with('contact','projects')->get();
+        return OrderResource::collection(
+            Order::with(['contact','projects.tasks'])->get()
+        );
     }
 
     /**
@@ -36,7 +39,8 @@ class OrderController extends Controller
             'deposit' => 'nullable|numeric',
         ]);
 
-        return Order::create($data);
+        $order = Order::create($data);
+        return new OrderResource($order->load('projects.tasks'));
     }
 
     /**
@@ -44,7 +48,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        return $order->load('projects');
+        return new OrderResource($order->load('projects.tasks'));
     }
 
     /**
@@ -70,7 +74,7 @@ class OrderController extends Controller
 
         $order->update($data);
 
-        return $order;
+        return new OrderResource($order->load('projects.tasks'));
     }
 
     /**

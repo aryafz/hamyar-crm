@@ -11,6 +11,14 @@
 
 این پروژه یک اسکلت اولیه برای راه‌اندازی سامانه مدیریت مشتریان، سفارش‌ها و پروژه‌ها به زبان فارسی است. ساختار بر پایه فریم‌ورک Laravel پیاده‌سازی شده تا بتوانید ماژول‌های مختلف مانند ثبت مشتری، مدیریت سفارش و پروژه را گسترش دهید.
 
+### توسعه پروژه
+
+در نسخهٔ فعلی از **Laravel API Resources** برای قالب‌بندی پاسخ‌ها استفاده شده است تا خروجی تمامی APIها ساختاری یکنواخت و حرفه‌ای داشته باشد. برای راه‌اندازی پروژه مراحل زیر را انجام دهید:
+
+1. نصب وابستگی‌ها با اجرای `composer install`
+2. ایجاد پایگاه داده و اجرای دستور `php artisan migrate`
+3. اجرای سرور محلی با `php artisan serve`
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

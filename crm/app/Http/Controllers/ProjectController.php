@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Resources\ProjectResource;
 
 class ProjectController extends Controller
 {
@@ -12,7 +13,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return Project::with('tasks')->get();
+        return ProjectResource::collection(
+            Project::with('tasks')->get()
+        );
     }
 
     /**
@@ -35,7 +38,8 @@ class ProjectController extends Controller
             'description' => 'nullable|string',
         ]);
 
-        return Project::create($data);
+        $project = Project::create($data);
+        return new ProjectResource($project->load('tasks'));
     }
 
     /**
@@ -43,7 +47,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return $project->load('tasks');
+        return new ProjectResource($project->load('tasks'));
     }
 
     /**
@@ -68,7 +72,7 @@ class ProjectController extends Controller
 
         $project->update($data);
 
-        return $project;
+        return new ProjectResource($project->load('tasks'));
     }
 
     /**

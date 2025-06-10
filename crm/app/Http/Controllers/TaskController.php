@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Http\Resources\TaskResource;
 
 class TaskController extends Controller
 {
@@ -12,7 +13,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return Task::all();
+        return TaskResource::collection(Task::all());
     }
 
     /**
@@ -35,7 +36,8 @@ class TaskController extends Controller
             'due_date' => 'nullable|date',
         ]);
 
-        return Task::create($data);
+        $task = Task::create($data);
+        return new TaskResource($task);
     }
 
     /**
@@ -43,7 +45,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return $task;
+        return new TaskResource($task);
     }
 
     /**
@@ -68,7 +70,7 @@ class TaskController extends Controller
 
         $task->update($data);
 
-        return $task;
+        return new TaskResource($task);
     }
 
     /**
