@@ -1,0 +1,211 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined static method App\\Models\\Order\:\:create\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Http/Controllers/OrderController.php
+
+		-
+			message: '#^Call to an undefined static method App\\Models\\Project\:\:create\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Http/Controllers/ProjectController.php
+
+		-
+			message: '#^Call to an undefined static method App\\Models\\Task\:\:create\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Http/Controllers/TaskController.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$first_name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$last_name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$mobile\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$notes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ContactResource\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ContactResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$amount\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$contact_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$deposit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\OrderResource\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/OrderResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$order_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\ProjectResource\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/ProjectResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$due_date\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$project_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Access to an undefined property App\\Http\\Resources\\TaskResource\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Resources/TaskResource.php
+
+		-
+			message: '#^Call to an undefined static method App\\Models\\Contact\:\:create\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Repositories/ContactRepository.php

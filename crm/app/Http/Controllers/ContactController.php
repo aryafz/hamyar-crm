@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Services\ContactService;
 use Illuminate\Http\Request;
 use App\Http\Resources\ContactResource;
 
 class ContactController extends Controller
 {
+    public function __construct(private ContactService $service)
+    {
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return ContactResource::collection(Contact::all());
+        return ContactResource::collection($this->service->list());
     }
 
     /**
@@ -38,7 +42,7 @@ class ContactController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        $contact = Contact::create($data);
+        $contact = $this->service->create($data);
         return new ContactResource($contact);
     }
 
@@ -72,7 +76,7 @@ class ContactController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        $contact->update($data);
+        $contact = $this->service->update($contact, $data);
 
         return new ContactResource($contact);
     }
@@ -82,7 +86,7 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        $contact->delete();
+        $this->service->delete($contact);
         return response()->noContent();
     }
 }
