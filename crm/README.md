@@ -76,3 +76,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Front-end
+
+برای توسعه رابط کاربری، ابتدا وابستگی‌های جاوااسکریپت را نصب کنید:
+
+```bash
+npm install
+```
+
+در حالت توسعه دستور زیر را اجرا کنید تا فایل‌ها به‌صورت خودکار کامپایل شوند:
+
+```bash
+npm run dev
+```
+
+قبل از استقرار پروژه، نسخه بهینه را بسازید:
+
+```bash
+npm run build
+```
+
+فایل‌های خروجی در مسیر `public/build` قرار می‌گیرند و از طریق Vite بارگذاری می‌شوند.
