@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Order;
 
 class Contact extends Model
 {
@@ -17,4 +18,9 @@ class Contact extends Model
         'address',
         'notes',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
